@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 0 0% 96%;
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 96%;
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 78 100% 50%;
+    --primary-foreground: 222 47% 6%;
+    --secondary: 240 10% 16%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 240 10% 16%;
+    --muted-foreground: 200 15% 70%;
+    --accent: 78 100% 50%;
+    --accent-foreground: 222 47% 6%;
+    --destructive: 16 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 78 100% 50%;
+    --radius: 0px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#101820] text-[#F5F5F5] antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #C6FF00 0%, #FF4500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glitch-text {
+    position: relative;
+  }
+
+  .noise-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+}
